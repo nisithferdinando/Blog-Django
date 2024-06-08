@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% block title %}Logout Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card my-3 shadow">
+                <div class="card-body" style="background-color:  rgba(23, 16, 6, 0.911); border-radius: 5px;">
+                    <h4 class="text-white">Logged Out</h4>
+                    <hr class="bg-dark">
+                    
+                    <div class="alert alert-info">
+                        You have been logged out.
+                    </div>
+                    <a  class="btn btn-secondary" href="{% url 'users-login' %}">Login</a>
+                    <a class="btn btn-primary" href="{% url 'users-sign-up' %}">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

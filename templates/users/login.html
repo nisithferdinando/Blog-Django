@@ -1,0 +1,35 @@
+{% extends 'partials/base.html' %}
+{% block title %} Login Page {% endblock %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="cover">
+<div class="container ">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-5 offset-md-4 mt-4">
+<div class="card my-3 bg-dark rounded-lg ">
+    <div class="card-body rounded-lg " style="background-color: rgba(7, 56, 56, 0.915);">
+        <h4 class="text-light text-center">Login</h4>
+        <hr class="bg-white"> 
+
+        <form method="POST" class="text-white">
+            {% csrf_token %}
+            {{ form |crispy }}
+            <input class="btn btn-primary btn-block" type= "Submit" value="Login"> 
+        </form>
+        <hr>
+        <div class="text-center my-3 ">
+            <a class="text-white" href="">Forget Password</a>
+        </div >
+        <hr class="bg-white">
+        <div class="text-center">
+        <a class="btn btn-success" href="{% url 'users-sign-up' %}">Create Account</a>
+    </div>
+</div>
+        </div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
